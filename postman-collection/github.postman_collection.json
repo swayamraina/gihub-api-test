@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "9f3c1fc9-1435-4fa8-a2b4-214028b63886",
+		"name": "github",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "update",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"message\": \"test commit #2\",\n  \"content\": \"TXkgc2Vjb25kIGNvbW1pdA==\",\n  \"sha\": \"8707e0cb0afcbff0e24a68c25b1224ff06dba8f9\"\n}"
+				},
+				"url": {
+					"raw": "https://api.github.com/repos/swayamraina/gihub-api-test/contents/sample-file.txt",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"repos",
+						"swayamraina",
+						"gihub-api-test",
+						"contents",
+						"sample-file.txt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"message\": \"test commit #3\",\n  \"content\": \"TXkgZmlyc3QgY29tbWl0\"\n}"
+				},
+				"url": {
+					"raw": "https://api.github.com/repos/swayamraina/gihub-api-test/contents/sample-file-2.txt",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"repos",
+						"swayamraina",
+						"gihub-api-test",
+						"contents",
+						"sample-file-2.txt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://api.github.com/repos/swayamraina/gihub-api-test/contents/test2",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"repos",
+						"swayamraina",
+						"gihub-api-test",
+						"contents",
+						"test2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"message\": \"test commit #4\",\n  \"sha\": \"8707e0cb0afcbff0e24a68c25b1224ff06dba8f9\"\n}"
+				},
+				"url": {
+					"raw": "https://api.github.com/repos/swayamraina/gihub-api-test/contents/sample-file-2.txt",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"repos",
+						"swayamraina",
+						"gihub-api-test",
+						"contents",
+						"sample-file-2.txt"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
