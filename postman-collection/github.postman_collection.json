@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "update",
+			"name": "UPDATE - file",
 			"request": {
 				"auth": {
 					"type": "basic",
@@ -54,7 +54,7 @@
 			"response": []
 		},
 		{
-			"name": "create",
+			"name": "CREATE - file",
 			"request": {
 				"auth": {
 					"type": "basic",
@@ -102,7 +102,7 @@
 			"response": []
 		},
 		{
-			"name": "get",
+			"name": "GET - file",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -127,7 +127,7 @@
 			"response": []
 		},
 		{
-			"name": "delete",
+			"name": "DELETE - file",
 			"request": {
 				"auth": {
 					"type": "basic",
@@ -169,6 +169,79 @@
 						"gihub-api-test",
 						"contents",
 						"sample-file-2.txt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - branch",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://api.github.com/repos/swayamraina/gihub-api-test/git/refs",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"repos",
+						"swayamraina",
+						"gihub-api-test",
+						"git",
+						"refs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE - branch",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ref\": \"refs/heads/swayam\",\n\t\"sha\": \"ddbea355afabc26a4c38cc33e8a243861495b5b2\"\n}"
+				},
+				"url": {
+					"raw": "https://api.github.com/repos/swayamraina/gihub-api-test/git/refs",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"repos",
+						"swayamraina",
+						"gihub-api-test",
+						"git",
+						"refs"
 					]
 				}
 			},
