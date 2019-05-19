@@ -3,4 +3,10 @@
   "tags": [
     "Heroku"
   ]
+},{
+  "url": "https://www.jamesgolick.com/2013/5/19/how-tcmalloc-works.html",
+  "tags": [
+    "C",
+    "Tmalloc"
+  ]
 }]
